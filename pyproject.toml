@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "bitbucket-cli"
+version = "0.1.0"
+description = ""
+authors = ["Ramon Pires da Silva <email@email.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+atlassian-python-api = "^3.41.9"
+python-dotenv = "^1.0.1"
+requests-oauthlib = "^1.3.1"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-mock = "^3.12.0"
+pytest-env = "^1.1.3"
+pytest-cov = "^4.1.0"
+black = "^24.1.1"
+pylint = "^3.0.3"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+src_paths = ["isort", "test"]

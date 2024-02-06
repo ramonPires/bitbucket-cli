@@ -1,0 +1,10 @@
+[MASTER]
+disable=
+    C0114, # missing-module-docstring
+    C0115, # missing-class-docstring
+    C0116, # missing-function-docstring
+    C0301, # line-too-long
+    R0913, # too-many-arguments
+    E0401, # import-error
+ignore-patterns=(.)*_test\.py,test_(.)*\.py,bitbucket-cli,cli.py
+ignore=tests
