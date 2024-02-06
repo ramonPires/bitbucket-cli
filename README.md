@@ -1,15 +1,15 @@
 # Setup:
-The project use [poetry](https://python-poetry.org) to manage dependencies, so you will need to install poetry and then run the command `poetry install` to install all required dependencies.
+The project uses [poetry](https://python-poetry.org) to manage dependencies, so you will need to install poetry and then run the command `poetry install` to install all required dependencies.
 
 The project use the `dotenv` to load some variables, so there is a file called `.env.sample`, rename the file to `.env`
-and automatically when you run the project the variables will be loaded as environment variables. Two variables require
-somme attention, `BITBUCKET_OAUTH_CONSUMER_KEY` and `BITBUCKET_OAUTH_CONSUMER_SECRET`, to fill the values you will need to create
-a new workspace consumer to allow the cli tool to access bitbucket cloud api using oauth authentication .
+and automatically, when you run the project, the variables will be loaded as environment variables. Two variables require
+some attention, `BITBUCKET_OAUTH_CONSUMER_KEY` and `BITBUCKET_OAUTH_CONSUMER_SECRET`, to fill the values, you will need to create
+a new workspace consumer to allow the cli tool to access bitbucket cloud api using OAuth authentication .
 You can find more details [here](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/) on how to create a new workspace consumer.
 
 
 # Running:
-In the root of the project there is a file `bibucket-cli`, you will use this file to run the cli tool, to run the cli you will execute this command `./bitbucket-cli` and then you will see an output like that:
+In the root of the project, there is a file `bibucket-cli`, you will use this file to run the cli tool, to run the cli you will execute this command `./bitbucket-cli` and then you will see an output like this:
 ```bash
 $ ./bitbucket-cli
 Usage: bitbucket-cli [OPTIONS] COMMAND [ARGS]...
@@ -109,7 +109,6 @@ Options:
 
 
 **OBS:
-The project rely on some bitbucket cloud internal and some almost deprecated apis due to some GDPR concerns of the Bitbucket Cloud team,
-like exposing the username or email through the api and some apis don't work with the oauth yet, so some endpoints where not used due to this limitation.**
+The project relies on some Bitbucket Cloud internal and some almost deprecated APIs due to some GDPR concerns of the Bitbucket Cloud team, like exposing the username or email through the API, some endpoints don't work with the OAuth yet, so some endpoints were not used due to this limitation.**
 - https://developer.atlassian.com/cloud/bitbucket/deprecation-notice-v1-apis/
 - https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/
